@@ -1,5 +1,5 @@
 package ru.bolgov.mentor.task1;
-
+//my code in dev
 public class Alphabet {
 	static char[] alphabet=(new String("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM")).toCharArray();
 	
