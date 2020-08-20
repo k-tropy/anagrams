@@ -1,7 +1,7 @@
 package ru.bolgov.mentor.task1;
 
 public class Alphabet {
-	static char[] alphabet=(new String("qwertyuiopasdfghjklzxcvbnm")).toCharArray();
+	static char[] alphabet=(new String("qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM")).toCharArray();
 	
 	public static boolean checkLetter(char letter) {
 		
