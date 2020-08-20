@@ -12,7 +12,7 @@ public class MainClass {
 		System.out.println(makeAnagram(text));
 	}
 	
-	public static String readConsole () {
+	private static String readConsole () {
 				
 		try (BufferedReader reader=new BufferedReader(new InputStreamReader(System.in))){
 			return (reader.readLine());
@@ -24,7 +24,7 @@ public class MainClass {
 		
 	}
 
-	public static StringBuilder makeAnagram (String text) {
+	private static StringBuilder makeAnagram (String text) {
 		StringBuilder returnedString = new StringBuilder("");
 		String[] words=text.split(" ");
 		
@@ -39,7 +39,7 @@ public class MainClass {
 		
 	}
 	
-	public static StringBuilder reversWord (String inputWord) {
+	private static StringBuilder reversWord (String inputWord) {
 		StringBuilder returnedWord = new StringBuilder("");
 		char[] letters = inputWord.toCharArray();
 		for (int i=0, j=letters.length-1; i<letters.length;i++,j--) {
