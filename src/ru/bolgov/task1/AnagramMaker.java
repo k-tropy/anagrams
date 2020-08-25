@@ -20,11 +20,11 @@ public class AnagramMaker {
         char[] letters = inputWord.toCharArray();
         for (int i = 0, j = letters.length - 1; i < letters.length; i++, j--) {
             if (i < j) {
-                if (!Alphabet.checkLetter(letters[i])) {
+                if (!checkLetter(letters[i])) {
                     j++;
                     result.append(letters[i]);
                     continue;
-                } else if (!Alphabet.checkLetter(letters[j])) {
+                } else if (!checkLetter(letters[j])) {
                     i--;
                     continue;
                 } else {
@@ -36,6 +36,11 @@ public class AnagramMaker {
             result.append(letters[i]);
         }
         return result;
+    }
+
+    private boolean checkLetter(char letter) {
+
+        return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
     }
 
 }
