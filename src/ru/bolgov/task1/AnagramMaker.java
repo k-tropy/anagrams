@@ -3,7 +3,7 @@ package ru.bolgov.task1;
 import java.util.StringJoiner;
 
 public class AnagramMaker {
-    static String makeAnagram(String text) {
+    public String makeAnagram(String text) {
 
         StringJoiner result = new StringJoiner(" ");
         String[] words = text.split(" ");
@@ -15,7 +15,7 @@ public class AnagramMaker {
         return result.toString();
     }
 
-    private static StringBuilder reverseWord(String inputWord) {
+    private StringBuilder reverseWord(String inputWord) {
         StringBuilder result = new StringBuilder("");
         char[] letters = inputWord.toCharArray();
         for (int i = 0, j = letters.length - 1; i < letters.length; i++, j--) {

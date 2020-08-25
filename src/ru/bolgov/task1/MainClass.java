@@ -1,6 +1,7 @@
 package ru.bolgov.task1;
 
 import java.io.BufferedReader;
+import ru.bolgov.task1.AnagramMaker;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -8,7 +9,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         String text = readFromConsole();
-        System.out.println(AnagramMaker.makeAnagram(text));
+        System.out.println((new AnagramMaker()).makeAnagram(text));
     }
 
     private static String readFromConsole() {
