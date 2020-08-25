@@ -1,7 +1,6 @@
 package ru.bolgov.task1;
 
 import java.io.BufferedReader;
-import ru.bolgov.task1.AnagramMaker;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
