@@ -15,16 +15,16 @@ public class AnagramMaker {
         return result.toString();
     }
 
-    private StringBuilder reverseWord(String inputWord) {
+    private String reverseWord(String inputWord) {
         StringBuilder result = new StringBuilder("");
         char[] letters = inputWord.toCharArray();
         for (int i = 0, j = letters.length - 1; i < letters.length; i++, j--) {
             if (i < j) {
-                if (!checkLetter(letters[i])) {
+                if (!isLetter(letters[i])) {
                     j++;
                     result.append(letters[i]);
                     continue;
-                } else if (!checkLetter(letters[j])) {
+                } else if (!isLetter(letters[j])) {
                     i--;
                     continue;
                 } else {
@@ -35,10 +35,10 @@ public class AnagramMaker {
             }
             result.append(letters[i]);
         }
-        return result;
+        return result.toString();
     }
 
-    private boolean checkLetter(char letter) {
+    private boolean isLetter(char letter) {
 
         return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
     }
