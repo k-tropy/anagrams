@@ -1,4 +1,4 @@
-package ru.bolgov.task1;
+package test;
 
 import static org.junit.Assert.*;
 
