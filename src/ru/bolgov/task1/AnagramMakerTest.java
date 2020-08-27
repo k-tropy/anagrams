@@ -9,37 +9,27 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class AnagramMakerTest {
-	private AnagramMaker anagram;
+    private AnagramMaker anagram;
 
-	@BeforeClass
-	public static void beforeClass() {
-		System.out.println("Before AnagramMakerTest.class");
-	}
+    @Before
+    public void initTest() {
+        anagram = new AnagramMaker();
+    }
 
-	@AfterClass
-	public static void afterClass() {
-		System.out.println("After AnagramMakerTest.class");
-	}
+    @After
+    public void afterTest() {
+        anagram = null;
+    }
 
-	@Before
-	public void initTest() {
-		anagram = new AnagramMaker();
-	}
+    @Test
+    public void testMakeAnagramEasy() {
+        // assertEquals("asdvcl;", anagram.makeAnagram("skwalc;"));
+        assertEquals("j", anagram.makeAnagram("j"));
+    }
 
-	@After
-	public void afterTest() {
-		anagram = null;
-	}
-
-	@Test
-	public void testMakeAnagramEasy() {
-		// assertEquals("asdvcl;", anagram.makeAnagram("skwalc;"));
-		assertEquals("j", anagram.makeAnagram("j"));
-	}
-
-	@Test
-	public void testMakeAnagram() {
-		assertEquals("jpo;,vs", anagram.makeAnagram("svo;,pj"));
-	}
+    @Test
+    public void testMakeAnagram() {
+        assertEquals("jpo;,vs", anagram.makeAnagram("svo;,pj"));
+    }
 
 }
