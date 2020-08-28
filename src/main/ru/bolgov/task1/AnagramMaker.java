@@ -4,6 +4,9 @@ import java.util.StringJoiner;
 
 public class AnagramMaker {
     public String makeAnagram(String text) {
+        if (null == text) {
+            throw new RuntimeException("input expected to not be null");
+        }
 
         StringJoiner result = new StringJoiner(" ");
         String[] words = text.split(" ");

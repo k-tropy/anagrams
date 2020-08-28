@@ -14,7 +14,7 @@ public class MainClass {
     private static String readFromConsole() throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s=reader.readLine();
+        String s = reader.readLine();
         reader.close();
         return s;
     }
