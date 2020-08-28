@@ -3,10 +3,6 @@ package first_test;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import ru.bolgov.task1.AnagramMaker;
@@ -15,9 +11,15 @@ public class AnagramMakerTest {
     private AnagramMaker anagram;
 
     @Test
-    public void testEasy() { 
+    public void testOneLetter() { 
         anagram = new AnagramMaker();
         assertEquals("j", anagram.makeAnagram("j"));
+    }
+    
+    @Test
+    public void testSameLetters() { 
+        anagram = new AnagramMaker();
+        assertEquals("sdfjjjjjjjj", anagram.makeAnagram("jjjjjjjjfds"));
     }
 
     @Test
@@ -27,15 +29,27 @@ public class AnagramMakerTest {
     }
     
     @Test
-    public void testWithSpace() { 
+    public void testJustSymbols() { 
         anagram = new AnagramMaker();
-        assertEquals("asdfg hjkl", anagram.makeAnagram("gfdsa lkjh"));
+        assertEquals(";,$%@^", anagram.makeAnagram(";,$%@^"));
+    }
+    
+    @Test
+    public void testLowerCase() { 
+        anagram = new AnagramMaker();
+        assertEquals("asdfg", anagram.makeAnagram("gfdsa"));
     }
     
     @Test
     public void testUpperCase() { 
         anagram = new AnagramMaker();
         assertEquals("QWERTY", anagram.makeAnagram("YTREWQ"));
+    }
+    
+    @Test
+    public void testDifferentRegistries() { 
+        anagram = new AnagramMaker();
+        assertEquals("zxcvQWERTY", anagram.makeAnagram("YTREWQvcxz"));
     }
     
     @Test
@@ -56,6 +70,30 @@ public class AnagramMakerTest {
         assertEquals("", anagram.makeAnagram(""));
     }
     
+    @Test
+    public void testSpace() { //How it should be with only one space
+        anagram = new AnagramMaker();
+        assertEquals("", anagram.makeAnagram(" "));
+    }
+    
+    @Test
+    public void testMultipleSpaces() { //How it should be with multiple spaces 
+        anagram = new AnagramMaker();
+        assertEquals("", anagram.makeAnagram("     "));
+    }
+    
+    @Test
+    public void testWithMultipleSpaces() { //How it should be with multiple spaces 
+        anagram = new AnagramMaker();
+        assertEquals("xcfb    sedgf", anagram.makeAnagram("bfcx    fgdes"));
+    }
+    
+    @Test
+    public void testMultipleWords() { 
+        anagram = new AnagramMaker();
+        assertEquals("asdfg hjkl", anagram.makeAnagram("gfdsa lkjh"));
+    }
+
     
 //TODO testNullInput
     
