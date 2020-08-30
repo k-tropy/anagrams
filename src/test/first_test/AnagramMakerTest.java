@@ -70,19 +70,19 @@ public class AnagramMakerTest {
     }
 
     @Test
-    public void testSpace() { // How it should be with only one space
+    public void testSpace() {
         anagram = new AnagramMaker();
         assertEquals("", anagram.makeAnagram(" "));
     }
 
     @Test
-    public void testMultipleSpaces() { // How it should be with multiple spaces
+    public void testMultipleSpaces() {
         anagram = new AnagramMaker();
         assertEquals("", anagram.makeAnagram("     "));
     }
 
     @Test
-    public void testWithMultipleSpaces() { // How it should be with multiple spaces
+    public void testWithMultipleSpaces() {
         anagram = new AnagramMaker();
         assertEquals("xcfb    sedgf", anagram.makeAnagram("bfcx    fgdes"));
     }
