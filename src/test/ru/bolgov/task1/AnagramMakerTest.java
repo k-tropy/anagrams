@@ -91,15 +91,14 @@ public class AnagramMakerTest {
         assertEquals("asdfg hjkl", anagram.makeAnagram("gfdsa lkjh"));
     }
 
-
     @Test
     public void testNullInput() {
         anagram = new AnagramMaker();
-        try {
-            assertEquals("", anagram.makeAnagram(null));
-            fail("Expected RuntimeException");
-        } catch (RuntimeException e) {
-            assertEquals("input expected to not be null", e.getMessage());
-        }
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            anagram.makeAnagram(null);
+        });
+
+        assertEquals("input expected to not be null", exception.getMessage());
     }
+
 }
