@@ -31,14 +31,19 @@ public class AnagramMaker {
                     i--;
                     continue;
                 } else {
-                    char v = letters[i];
-                    letters[i] = letters[j];
-                    letters[j] = v;
+                    swapLetters(letters, i, j);
                 }
             }
             result.append(letters[i]);
         }
         return result.toString();
+    }
+
+    private void swapLetters(char[] letters, int i, int j) {
+
+        char v = letters[i];
+        letters[i] = letters[j];
+        letters[j] = v;
     }
 
     private boolean isLetter(char letter) {

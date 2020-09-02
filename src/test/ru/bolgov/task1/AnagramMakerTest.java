@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ru.bolgov.task1.AnagramMaker;
-
 public class AnagramMakerTest {
     private AnagramMaker anagram;
 
