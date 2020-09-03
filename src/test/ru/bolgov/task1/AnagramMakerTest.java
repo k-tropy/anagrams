@@ -56,12 +56,6 @@ public class AnagramMakerTest {
     }
 
     @Test
-    public void testRussian() {
-        anagram = new AnagramMaker();
-        assertEquals("âàîÔİ,ŞÁóñ", anagram.makeAnagram("âàîÔİ,ŞÁóñ"));
-    }
-
-    @Test
     public void testEmptyInput() {
         anagram = new AnagramMaker();
         assertEquals("", anagram.makeAnagram(""));
