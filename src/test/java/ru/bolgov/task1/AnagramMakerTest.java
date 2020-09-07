@@ -1,8 +1,10 @@
 package ru.bolgov.task1;
 
-import static org.junit.Assert.*;
+//import ru.bolgov.task1.AnagramMaker;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
 
 public class AnagramMakerTest {
     private AnagramMaker anagram;
