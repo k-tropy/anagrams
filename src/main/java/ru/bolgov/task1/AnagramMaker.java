@@ -40,14 +40,12 @@ public class AnagramMaker {
     }
 
     private void swapLetters(char[] letters, int i, int j) {
-
         char v = letters[i];
         letters[i] = letters[j];
         letters[j] = v;
     }
 
     private boolean isLetter(char letter) {
-
         return (letter >= 'A' && letter <= 'Z') || (letter >= 'a' && letter <= 'z');
     }
 

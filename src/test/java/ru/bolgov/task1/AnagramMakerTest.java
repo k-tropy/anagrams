@@ -1,7 +1,5 @@
 package ru.bolgov.task1;
 
-//import ru.bolgov.task1.AnagramMaker;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
