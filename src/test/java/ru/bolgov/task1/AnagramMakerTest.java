@@ -88,10 +88,7 @@ public class AnagramMakerTest {
     @Test
     public void testNullInput() {
         anagram = new AnagramMaker();
-        Exception exception = assertThrows(RuntimeException.class, () -> {
-            anagram.makeAnagram(null);
-        });
-
+        Exception exception = assertThrows(RuntimeException.class, () -> anagram.makeAnagram(null));
         assertEquals("input expected to not be null", exception.getMessage());
     }
 

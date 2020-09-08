@@ -23,12 +23,13 @@ public class AnagramMaker {
         char[] letters = inputWord.toCharArray();
         for (int i = 0, j = letters.length - 1; i < letters.length; i++, j--) {
             if (i < j) {
-                if (!isLetter(letters[i])) {
-                    j++;
-                    result.append(letters[i]);
-                    continue;
-                } else if (!isLetter(letters[j])) {
-                    i--;
+                if (!isLetter(letters[i]) || !isLetter(letters[j])) {
+                    if (!isLetter(letters[j])) {
+                        i--;
+                    } else {
+                        j++;
+                        result.append(letters[i]);
+                    }
                     continue;
                 } else {
                     swapLetters(letters, i, j);
@@ -40,6 +41,7 @@ public class AnagramMaker {
     }
 
     private void swapLetters(char[] letters, int i, int j) {
+
         char v = letters[i];
         letters[i] = letters[j];
         letters[j] = v;
